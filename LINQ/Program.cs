@@ -1,10 +1,14 @@
-﻿namespace LINQ
+﻿
+
+
+List<string> countriesIveTraveled = new List<string>() { "France", "Germany", "Denmark", "Sweden", "Austria", "Norway", "Netherlands" };
+
+countriesIveTraveled.Add("Iceland");
+countriesIveTraveled.Add("Belgium");
+
+var orderedCountries = countriesIveTraveled.OrderByDescending(name => name.Length);
+
+foreach (var countries in orderedCountries)
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
+    Console.WriteLine(countries);
 }
